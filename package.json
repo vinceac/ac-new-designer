@@ -3,6 +3,7 @@
   "version": "0.2.20",
   "description": "GrapesJS preset configuration for the newsletter editor",
   "main": "dist/grapesjs-preset-newsletter.min.js",
+  "build": "npm start",
   "scripts": {
     "lint": "eslint src",
     "build": "cross-env WEBPACK_ENV=prod && npm run v:patch && webpack && npm run build:css",
