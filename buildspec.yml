@@ -8,10 +8,9 @@ phases:
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
-  pre_build:
+  build:
     commands:
-      # Discover and run unit tests in the 'tests' directory
-      - npm test
+      - npm start
   post_build:
     commands:
       # Remove existing node_modules to clear dev dependencies
@@ -22,11 +21,10 @@ phases:
 artifacts:
   type: zip
   files:
-    - template.yml
     - README.md
     - package.json
-    - app.js
-    - appspec.yml
-    - scripts/*
+    - src/**/*
     - node_modules/**/*
     - public/**/*
+    - style/
+    - index.html
